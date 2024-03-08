@@ -12,18 +12,15 @@ export default function createIteratorObject(report) {
 
         if (employees && employeeIndex < employees.length) {
           return { value: employees[employeeIndex++], done: false };
-        } else {
-          employeeIndex = 0;
-          departmentIndex++;
-          return this.next(); 
         }
-      } else {
-        return { done: true };
+        employeeIndex = 0;
+        departmentIndex += 1;
+        return this.next();
       }
+      return { done: true };
     },
     [Symbol.iterator]() {
       return this;
-    }
+    },
   };
 }
-
