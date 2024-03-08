@@ -15,6 +15,6 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
-    return new super.constructor[Symbol.species];
+    return new Car(this._brand, this._motor, this._range);
   }
 }
