@@ -62,7 +62,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
 const SERVER_ROUTE_HANDLERS = [
   {
     route: '/',
-    handler (_, res) {
+    handler(_, res) {
       const responseText = 'Hello Holberton School!';
 
       res.setHeader('Content-Type', 'text/plain');
